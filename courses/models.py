@@ -9,4 +9,19 @@ class Course(models.Model):
 
     def __str__(self):
         return self.title
- 
+
+class Module(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+class Lesson(models.Model):
+    module = models.ForeignKey(Module, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    content = models.TextField() # Can be extended to cater different content types.
+
+    def __str__(self):
+        return self.title
