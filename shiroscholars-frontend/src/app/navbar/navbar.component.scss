@@ -1,0 +1,50 @@
+$theme-main: #FFD4B2;
+$theme-accent: #FFF6BD;
+
+nav {
+  background-color: $theme-accent;
+  padding: 10px 0;
+
+  a {
+    color: $theme-main;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($theme-accent, 10%);
+    }
+  }
+
+  // For mobile view
+  .menu-toggle {
+    display: none; // Hide by default
+    cursor: pointer;
+
+    // Styling for the hamburger icon can be added here
+  }
+
+  // Mobile-first approach: hide the items on small screens by default
+  .navbar-items {
+    display: none;
+    flex-direction: column; // Stack them vertically
+
+    a {
+      margin: 10px 0; // Vertical spacing for stacked items
+    }
+  }
+
+  // Desktop view: when screen width is 768px or more
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none; // Hide the hamburger icon
+    }
+
+    .navbar-items {
+      display: flex; // Show the items inline
+    }
+  }
+}
+
+

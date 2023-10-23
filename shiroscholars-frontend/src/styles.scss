@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+// Theme colors
+$theme-main: #FFD4B2;
+$theme-accent: #FFF6BD;
+$theme-success: #CEEDC7;
+$theme-info: #86C8BC;
+
+// Base settings
+$base-font: 'Roboto', sans-serif;
+$base-bg: $theme-main;
+
+body {
+  font-family: $base-font;
+  background-color: $base-bg;
+}
+

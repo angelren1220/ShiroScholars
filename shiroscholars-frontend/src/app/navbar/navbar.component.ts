@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-
+  navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/courses', label: 'Courses' },
+    { path: '/scheduler', label: 'Scheduler' }
+  ];
+  
 }
